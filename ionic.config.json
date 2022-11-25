@@ -1,0 +1,7 @@
+{
+  "name": "mero-network-trying",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
