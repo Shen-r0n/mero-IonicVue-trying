@@ -1,9 +1,10 @@
 <template>
-<nav-bar>
+  <nav-bar>
     <h1>This is introduction Page</h1>
-</nav-bar>
+    <h2>dskfjlsjf</h2>
+  </nav-bar>
 
-    <!-- <ion-page>
+  <!-- <ion-page>
         <ion-header>
             <ion-content>
             <nav-bar></nav-bar>
@@ -13,14 +14,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import {IonPage} from '@ionic/vue';
+import { defineComponent } from "vue";
+import { IonPage } from "@ionic/vue";
 
 export default defineComponent({
-    name:'IntroductionPage',
-    components:{
-        // IonPage
-    }
-
-})
+  name: "IntroductionPage",
+  components: {
+    // IonPage
+  },
+});
 </script>

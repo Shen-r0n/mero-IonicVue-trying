@@ -19,12 +19,10 @@
       WHY VUE.JS?
     </ion-button>
 
-    <div class="logo-seperate">
-      <ion-button shape="round"
-        ><a href="/introduction" class="anchor-tag-text"
-          >GET STARTED</a
-        ></ion-button
-      >
+    <div class="center">
+      <ion-button shape="round" class="middle-button">
+        <a href="/introduction" class="anchor-tag-text">GET STARTED</a>
+      </ion-button>
       <ion-button class="github-logo" shape="round">
         <ion-icon slot="start" :icon="logoGithub"></ion-icon>
         GITHUB</ion-button
@@ -120,12 +118,17 @@ export default defineComponent({
   margin-right: auto;
 }
 
-.logo-seperate {
-  display: block;
-  width: 50vw;
-  /* margin-left: 0px ;
-  margin-right: 0px ; */
+.middle-button {
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  padding-left: 15vw;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  display: flex;
 }
 
 .get-started-button {
