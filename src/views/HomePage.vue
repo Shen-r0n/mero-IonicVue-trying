@@ -1,5 +1,5 @@
 <template>
-  <nav-bar>
+  <nav-bar :pageTitle="pagetitle">
     <div class="div-logo">
       <img
         class="vue-logo"
@@ -92,6 +92,11 @@ export default defineComponent({
   },
   setup() {
     return { star, logoGithub, gitBranchOutline };
+  },
+  data() {
+    return {
+      pagetitle: "Progressive App",
+    };
   },
   //   methods:{
   //  goToIntroductionPage(){

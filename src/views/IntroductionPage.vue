@@ -1,7 +1,6 @@
 <template>
-  <nav-bar>
+  <nav-bar :pageTitle="pageTitle">
     <h1>This is introduction Page</h1>
-    <h2>dskfjlsjf</h2>
   </nav-bar>
 
   <!-- <ion-page>
@@ -21,6 +20,11 @@ export default defineComponent({
   name: "IntroductionPage",
   components: {
     // IonPage
+  },
+  data() {
+    return {
+      pageTitle: "Introduction",
+    };
   },
 });
 </script>
