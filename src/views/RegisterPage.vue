@@ -35,8 +35,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import instance from "@/utils/axios";
 // import { useRouter } from "vue-router";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 // const email = ref("");
 // const password = ref("");
@@ -60,19 +61,30 @@ export default defineComponent({
   name: "RegisterPage",
 
   methods: {
-    register() {
-      console.log(this.email, this.password);
-      createUserWithEmailAndPassword(getAuth(), this.email, this.password)
-        .then((data) => {
-          console.log("Successfully Registered!");
-          sessionStorage.setItem("login_status", "true");
-          this.$router.push("about");
-        })
-        .catch((error) => {
-          console.log(error.code);
-          alert(error.message);
+    async register() {
+      try {
+        const response = await instance.post("auth/register", {
+          email: this.email,
+          password: this.password,
         });
+        console.log("response", response);
+      } catch (error) {
+        console.log(error);
+      }
     },
+    // register() {
+    //   console.log(this.email, this.password);
+    //   createUserWithEmailAndPassword(getAuth(), this.email, this.password)
+    //     .then((data) => {
+    //       console.log("Successfully Registered!");
+    //       sessionStorage.setItem("login_status", "true");
+    //       this.$router.push("about");
+    //     })
+    //     .catch((error) => {
+    //       console.log(error.code);
+    //       alert(error.message);
+    //     });
+    // },
   },
 
   data() {
